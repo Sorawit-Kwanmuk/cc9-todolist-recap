@@ -1,16 +1,17 @@
-import React from 'react'
-import JobItems from './JobItems'
+import React, { useContext } from 'react';
+import { ListContext } from '../contexts/ListContext';
+import JobItems from './JobItems';
 
-function Lists(props) {
-  const {lists, hdlDel, hdlEdit} = props
+function Lists() {
+  const { lists } = useContext(ListContext);
+
   return (
-    <div className="row justify-content-center">
-      {lists.map(x=>(
-        <JobItems key={x.id} item={x} hdlDel={hdlDel} hdlEdit={hdlEdit} />
-      ))    
-      }
+    <div className='row justify-content-center'>
+      {lists.map(x => (
+        <JobItems key={x.id} item={x} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default Lists
+export default Lists;

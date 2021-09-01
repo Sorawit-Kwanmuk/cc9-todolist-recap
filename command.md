@@ -1,0 +1,2 @@
+- `npx json-server --watch todo.json --port 8080` ทดลองรันserver ด้วย json-server
+- `npm i -g json-server` ติดตั้ง json-server ในเครื่องเรา
